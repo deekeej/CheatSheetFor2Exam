@@ -1,0 +1,60 @@
+﻿@using OrientationExamTryJava.IndexViewModel;
+@model ViewModel;
+
+
+@if (Model.IsInDb)
+{
+	<h2 style="color:red;">Your Alias is already in use!</h2>
+	<form method="post" action="save-link">
+		<label>
+			URL
+			<div>
+				<input type="url" name="url" placeholder="@Model.CurrentAliaser.Url" />
+			</div>
+		</label>
+		<label>
+			Alias
+			<div>
+				<input type="text" name="alias" placeholder="@Model.CurrentAliaser.Alias" />
+			</div>
+		</label>
+		<button type="submit">Submit</button>
+	</form>
+}
+else if (@Model.CurrentAliaser == null)
+{
+	<form method="post" action="save-link">
+		<label>
+			URL
+			<div>
+				<input type="url" name="url" />
+			</div>
+		</label>
+		<label>
+			Alias
+			<div>
+				<input type="text" name="alias" />
+			</div>
+		</label>
+		<button type="submit">Submit</button>
+	</form>
+}
+else
+{
+	<h2>Your URL is aliased to @Model.CurrentAliaser.Alias and your secret code is @Model.CurrentAliaser.SecretCode</h2>
+	<form method="post" action="save-link">
+		<label>
+			URL
+			<div>
+				<input type="url" name="url" />
+			</div>
+		</label>
+		<label>
+			Alias
+			<div>
+				<input type="text" name="alias" />
+			</div>
+		</label>
+		<button type="submit">Submit</button>
+	</form>
+}
