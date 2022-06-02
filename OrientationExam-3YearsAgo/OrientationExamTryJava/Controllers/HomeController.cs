@@ -62,7 +62,8 @@ namespace OrientationExamTryJava.Controllers
         [HttpGet("api/links")]
         public IActionResult links()
         {
-            return Ok( AliasService.GetList());
+            List<MessageToBeSendDTO> cs = AliasService.GetList().Select(a=>new MessageToBeSendDTO(a.Id,a.Url,a.Alias,a.HitCount)).ToList();
+            return Ok(cs);
         }
 
         [HttpDelete("api/links/{id}")]

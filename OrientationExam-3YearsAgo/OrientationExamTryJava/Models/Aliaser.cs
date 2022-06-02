@@ -8,7 +8,7 @@ namespace OrientationExamTryJava.Models
 		public string Url { get; set; }
 		public string Alias { get; set; }
 		public int HitCount{ get; set; }
-		[JsonIgnore]
+		/*[JsonIgnore]*/
 		public string SecretCode{ get; set; }
 
 		public Aliaser(string url, string alias, string secretCode,int hitCount=0)

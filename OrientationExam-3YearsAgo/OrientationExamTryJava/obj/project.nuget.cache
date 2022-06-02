@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8XT+/f47B7JpqJDj9U91zZhfrauxqFCg1/0Pv1v6J6j8rGHmeIbTy3dYMbeSUZ754dMmRSgE24GMDCFB0Zivhg==",
+  "dgSpecHash": "Yn3eJAFgQ7ahVrW5jmxc6yKCZmFGX4h4Al9kesBZ60RLjz0zBkx54QvFZj+TokNDFZ1Hyo4ezKxcgXIm4tTW2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\OrientationExam-3YearsAgo\\OrientationExamTryJava\\OrientationExamTryJava.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\MyCheatSheetRepo\\CheatSheetFor2Exam\\OrientationExam-3YearsAgo\\OrientationExamTryJava\\OrientationExamTryJava.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
