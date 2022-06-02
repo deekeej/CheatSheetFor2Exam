@@ -1,0 +1,78 @@
+﻿@using ExerciseWithManyToManyAtd.IndexViewModel
+@model ViewModel;
+
+<h2>Add User</h2>
+<form method="post" action=@Url.Action("AddUs")>
+	<label>
+		Name:
+		<input name="name" type="text" />
+	</label>
+	<label>
+		Surname:
+		<input name="surname" type="text" />
+	</label>
+	<label>
+		Club Id:
+		<input name="clubId" type="number" />
+	</label>
+	<button type="Submit">Submit</button>
+</form>
+<h2>Users</h2>
+<table>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Surname</th>
+		<th>ClubId</th>
+	</tr>
+
+	@foreach (var user in @Model.ListOfUsers)
+	{
+		<tr>
+			<td>@user.Id</td>
+			<td>@user.Name</td>
+			<td>@user.Surname</td>
+			<td>@user.ClubId</td>
+		</tr>
+	}
+</table>
+
+<h2>Add Party</h2>
+<form method="post" action=@Url.Action("AddParty")>
+	<label>
+		Name:
+		<input name="name" type="text" />
+	</label>
+	<button type="Submit">Submit</button>
+</form>
+
+<h2>Parties</h2>
+<table>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+	</tr>
+	@foreach (var party in @Model.ListOfParties)
+	{
+		<tr>
+			<td>@party.Id</td>
+			<td>@party.Name</td>
+		</tr>
+	}
+</table>
+
+<h2>PartiesWithUser</h2>
+
+<table>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+	</tr>
+	@foreach (var party in @Model.PartiesWithUser)
+	{
+		<tr>
+			<td>@party.UserList</td>
+			<td>@party.Name</td>
+		</tr>
+	}
+</table>
